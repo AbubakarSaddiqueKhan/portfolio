@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abubakar Saddique — Mobile Engineer</title>
+<meta name="description" content="Flutter and native Android developer with 4+ years of experience. 14 mobile products shipped, six live on Google Play.">
+<meta name="author" content="Abubakar Saddique">
+<link rel="canonical" href="https://abubakarsaddiquekhan.github.io/portfolio/">
+<link rel="icon" href="abubakar.webp" type="image/webp">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Abubakar Saddique — Mobile Engineer">
+<meta property="og:description" content="Flutter and native Android developer with 4+ years of experience. 14 mobile products shipped, six live on Google Play.">
+<meta property="og:url" content="https://abubakarsaddiquekhan.github.io/portfolio/">
+<meta property="og:image" content="https://abubakarsaddiquekhan.github.io/portfolio/abubakar.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Abubakar Saddique — Mobile Engineer">
+<meta name="twitter:description" content="Flutter and native Android developer with 4+ years of experience. 14 mobile products shipped, six live on Google Play.">
+<meta name="twitter:image" content="https://abubakarsaddiquekhan.github.io/portfolio/abubakar.webp">
+
+<style>
+  /* The artifact host supplies this reset; GitHub Pages does not. */
+  :root {
+    color-scheme: light;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  body { margin: 0; font: 14px system-ui, sans-serif; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+
+<style>
+/* Layout: a sticky rail of sections beside a work-led index — shipped apps first, each card a door to the store. */
+:root {
+  --ink:        #131a23;
+  --ink-soft:   #536373;
+  --ink-faint:  #8b98a5;
+  --paper:      #f7f5f2;
+  --surface:    #ffffff;
+  --surface-2:  #f1eee9;
+  --line:       #e0dcd5;
+  --line-soft:  #ebe7e1;
+  --accent:     #b04e17;
+  --accent-ink: #ffffff;
+  --accent-dim: #f5e5d8;
+  --live:       #1a6e50;
+  --live-dim:   #e2f0e9;
+  --shadow:     0 1px 2px rgba(19,26,35,.05), 0 8px 24px -12px rgba(19,26,35,.14);
+  --shadow-lift:0 2px 4px rgba(19,26,35,.06), 0 18px 40px -16px rgba(19,26,35,.26);
+
+  --display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --measure: 60ch;
+  --r: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #eceae6; --ink-soft: #9dabb8; --ink-faint: #6c7a87;
+    --paper: #0f1318; --surface: #171c23; --surface-2: #1d232b;
+    --line: #2a313a; --line-soft: #222930;
+    --accent: #ef9254; --accent-ink: #1a1207; --accent-dim: #2c2016;
+    --live: #4fc794; --live-dim: #16271f;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.6);
+    --shadow-lift: 0 2px 6px rgba(0,0,0,.5), 0 22px 46px -18px rgba(0,0,0,.75);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #eceae6; --ink-soft: #9dabb8; --ink-faint: #6c7a87;
+  --paper: #0f1318; --surface: #171c23; --surface-2: #1d232b;
+  --line: #2a313a; --line-soft: #222930;
+  --accent: #ef9254; --accent-ink: #1a1207; --accent-dim: #2c2016;
+  --live: #4fc794; --live-dim: #16271f;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 28px -14px rgba(0,0,0,.6);
+  --shadow-lift: 0 2px 6px rgba(0,0,0,.5), 0 22px 46px -18px rgba(0,0,0,.75);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--body); font-size: 16px; line-height: 1.55;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+h1,h2,h3,h4 { font-family: var(--display); margin: 0; letter-spacing: -.018em; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; }
+
+/* ---------- top bar ---------- */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--line-soft);
+}
+.bar-in { display: flex; align-items: center; gap: 18px; padding-block: 12px; }
+.sig { font-family: var(--display); font-weight: 800; font-size: 15px; letter-spacing: -.02em; }
+.sig em { font-style: normal; color: var(--accent); }
+.nav { display: flex; gap: 4px; margin-left: auto; align-items: center; }
+.nav a {
+  font-size: 13.5px; color: var(--ink-soft); padding: 7px 11px; border-radius: 8px;
+  transition: background .15s, color .15s;
+}
+.nav a:hover { background: var(--surface-2); color: var(--ink); }
+.icon-btn {
+  display: inline-grid; place-items: center; width: 34px; height: 34px;
+  border: 1px solid var(--line); background: var(--surface); border-radius: 9px;
+  cursor: pointer; color: var(--ink-soft); flex: none; transition: border-color .15s, color .15s;
+}
+.icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+.icon-btn svg { width: 16px; height: 16px; display: block; }
+@media (max-width: 700px) { .nav a { display: none; } }
+
+/* ---------- hero ---------- */
+.hero { padding-block: 64px 44px; position: relative; }
+.hero-grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: 46px; align-items: start;
+}
+.portrait { position: relative; flex: none; width: 212px; }
+.portrait img {
+  width: 212px; height: 212px; display: block; object-fit: cover;
+  border-radius: 20px; border: 1px solid var(--line);
+  box-shadow: var(--shadow-lift);
+}
+.portrait::after {
+  content: ""; position: absolute; inset: -14px -14px 22px 22px;
+  border-radius: 24px; z-index: -1;
+  background: linear-gradient(140deg,
+    color-mix(in srgb, var(--accent) 34%, transparent),
+    color-mix(in srgb, var(--live) 24%, transparent));
+  filter: blur(22px); opacity: .55;
+}
+.portrait figcaption {
+  margin-top: 14px; font-family: var(--mono); font-size: 11px;
+  letter-spacing: .07em; text-transform: uppercase; color: var(--ink-faint);
+  text-align: center;
+}
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+  .portrait { order: -1; width: 128px; }
+  .portrait img { width: 128px; height: 128px; border-radius: 16px; }
+  .portrait figcaption { text-align: left; }
+}
+.hero::before {
+  content: ""; position: absolute; inset: -40px -200px auto -200px; height: 340px;
+  background:
+    radial-gradient(60% 70% at 18% 0%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 70%),
+    radial-gradient(45% 60% at 82% 10%, color-mix(in srgb, var(--live) 10%, transparent), transparent 72%);
+  pointer-events: none; z-index: -1;
+}
+.status {
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono);
+  font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--live); background: var(--live-dim); border-radius: 999px;
+  padding: 6px 13px; border: 1px solid color-mix(in srgb, var(--live) 24%, transparent);
+}
+.status .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--live); flex: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .status .dot { animation: pulse 2.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1 } 50% { opacity: .35 } }
+}
+h1 {
+  font-size: clamp(2.6rem, 8vw, 5rem); font-weight: 800; line-height: .98;
+  margin-top: 20px;
+}
+.tagline {
+  font-family: var(--display); font-weight: 600; color: var(--accent);
+  font-size: clamp(1.1rem, 3vw, 1.6rem); margin-top: 14px;
+}
+.lede { margin-top: 20px; max-width: var(--measure); color: var(--ink-soft); font-size: 17px; }
+.lede b { color: var(--ink); font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; border-radius: 10px;
+  padding: 11px 18px; font-size: 14.5px; font-weight: 500; cursor: pointer;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  transition: transform .15s, box-shadow .15s, border-color .15s;
+  font-family: var(--body);
+}
+.btn svg { width: 16px; height: 16px; flex: none; }
+.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow); border-color: var(--ink-faint); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { box-shadow: var(--shadow-lift); }
+
+/* ---------- stats ---------- */
+.stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(142px, 1fr));
+  gap: 1px; background: var(--line); border: 1px solid var(--line);
+  border-radius: var(--r); overflow: hidden; margin-top: 46px;
+}
+.stat { background: var(--surface); padding: 20px 22px; }
+.stat b {
+  font-family: var(--display); font-weight: 800; font-size: 2.2rem; line-height: 1;
+  display: block; font-variant-numeric: tabular-nums;
+}
+.stat span {
+  display: block; margin-top: 8px; font-family: var(--mono); font-size: 11.5px;
+  letter-spacing: .05em; color: var(--ink-soft);
+}
+
+/* ---------- sections ---------- */
+section { padding-block: 56px 0; scroll-margin-top: 80px; }
+.head { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }
+.head h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; }
+.kicker {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+}
+.sub { color: var(--ink-soft); font-size: 15px; max-width: var(--measure); margin-top: 10px; }
+
+/* ---------- filters ---------- */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 26px 0 20px; }
+.filter {
+  font-family: var(--body); font-size: 13.5px; padding: 8px 14px; cursor: pointer;
+  border-radius: 999px; border: 1px solid var(--line); background: var(--surface);
+  color: var(--ink-soft); transition: all .15s;
+}
+.filter:hover { border-color: var(--ink-faint); color: var(--ink); }
+.filter[aria-pressed="true"] {
+  background: var(--ink); border-color: var(--ink); color: var(--paper);
+}
+.filter .n { font-family: var(--mono); font-size: 11px; opacity: .65; margin-left: 5px; }
+
+/* ---------- work ---------- */
+.work { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+.card {
+  position: relative; display: flex; flex-direction: column; gap: 12px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 22px; min-width: 0; box-shadow: var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.card:hover, .card:focus-within { transform: translateY(-3px); box-shadow: var(--shadow-lift); border-color: var(--ink-faint); }
+.card[hidden] { display: none; }
+.card-top { display: flex; align-items: center; gap: 12px; }
+.mark {
+  width: 42px; height: 42px; border-radius: 11px; flex: none; display: grid;
+  place-items: center; font-family: var(--display); font-weight: 800; font-size: 17px;
+  background: var(--surface-2); color: var(--ink-soft);
+  border: 1px solid var(--line-soft);
+}
+.card.pub .mark { background: var(--accent-dim); color: var(--accent); border-color: color-mix(in srgb, var(--accent) 22%, transparent); }
+.card h3 { font-size: 1.1rem; font-weight: 700; min-width: 0; }
+.card h3 a::after { content: ""; position: absolute; inset: 0; border-radius: var(--r); }
+.card p { font-size: 14.2px; color: var(--ink-soft); min-width: 0; }
+.tech { display: flex; flex-wrap: wrap; gap: 6px; }
+.tech span {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .03em;
+  color: var(--ink-faint); border: 1px solid var(--line-soft);
+  border-radius: 5px; padding: 3px 7px; background: var(--surface-2);
+}
+.card-foot {
+  margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line-soft);
+  display: flex; align-items: center; gap: 10px; justify-content: space-between;
+  min-width: 0;
+}
+.go {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 12.8px;
+  font-weight: 600; color: var(--accent); min-width: 0;
+}
+.card.pub .go { color: var(--live); }
+.go svg { width: 13px; height: 13px; flex: none; transition: transform .18s; }
+.card:hover .go svg { transform: translate(2px, -2px); }
+.pkg {
+  font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0;
+}
+.badge {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .07em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 5px; flex: none;
+  background: var(--surface-2); color: var(--ink-faint); border: 1px solid var(--line-soft);
+}
+
+/* ---------- experience ---------- */
+.roles { display: grid; gap: 14px; margin-top: 26px; }
+.role {
+  display: grid; grid-template-columns: 168px 1fr; gap: 24px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--r); padding: 24px; box-shadow: var(--shadow);
+}
+.role .when { font-family: var(--mono); font-size: 12.5px; color: var(--ink-soft); }
+.role .now {
+  display: inline-block; margin-top: 8px; font-family: var(--mono); font-size: 10px;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--live);
+  background: var(--live-dim); border-radius: 5px; padding: 3px 7px;
+}
+.role h3 { font-size: 1.15rem; font-weight: 700; }
+.role .org { color: var(--accent); font-size: 13.8px; font-weight: 500; margin-top: 4px; }
+.role p { margin-top: 12px; font-size: 14.3px; color: var(--ink-soft); max-width: var(--measure); }
+@media (max-width: 620px) { .role { grid-template-columns: 1fr; gap: 10px; } }
+
+/* ---------- skills ---------- */
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 26px; }
+.skill {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
+  padding: 20px; box-shadow: var(--shadow);
+}
+.skill h3 {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--accent); font-weight: 500; margin-bottom: 12px;
+}
+.skill ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 7px; }
+.skill li { font-size: 13.3px; background: var(--surface-2); border: 1px solid var(--line-soft);
+  border-radius: 7px; padding: 5px 10px; }
+
+/* ---------- contact ---------- */
+.contact {
+  margin-block: 56px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 16px; padding: 38px; box-shadow: var(--shadow);
+}
+.contact h2 { font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 800; }
+.contact p { color: var(--ink-soft); max-width: var(--measure); margin-top: 12px; }
+.copyrow { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.copy {
+  display: inline-flex; align-items: center; gap: 9px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--surface-2); color: var(--ink);
+  border-radius: 10px; padding: 10px 15px; font-family: var(--mono); font-size: 13px;
+  transition: border-color .15s, transform .15s;
+}
+.copy:hover { border-color: var(--accent); transform: translateY(-1px); }
+.copy .lbl {
+  font-size: 10px; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-faint);
+}
+footer {
+  border-top: 1px solid var(--line-soft); padding-block: 26px 48px;
+  display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+  font-family: var(--mono); font-size: 11.5px; color: var(--ink-faint);
+}
+.toast {
+  position: fixed; left: 50%; transform: translateX(-50%) translateY(8px);
+  bottom: calc(22px + env(safe-area-inset-bottom, 0px)); z-index: 40;
+  background: var(--ink); color: var(--paper); padding: 10px 18px; border-radius: 999px;
+  font-size: 13px; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s;
+}
+.toast.on { opacity: 1; transform: translateX(-50%) translateY(0); }
+@media (prefers-reduced-motion: reduce) { *, *::before { transition: none !important; animation: none !important; } }
+</style>
+
+<div class="bar">
+  <div class="wrap bar-in">
+    <span class="sig">Abubakar <em>Saddique</em></span>
+    <nav class="nav">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="icon-btn" id="theme" aria-label="Switch colour theme" title="Switch theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="hero">
+   <div class="hero-grid">
+    <div>
+    <span class="status"><span class="dot"></span>Available · 14 days notice</span>
+    <h1>Mobile apps that<br>ship and stay up.</h1>
+    <div class="tagline">Flutter &amp; native Android · 4+ years</div>
+    <p class="lede">
+      I build cross-platform mobile applications in Flutter and native Android —
+      <b>14 products shipped</b>, six of them public on Google Play. My work runs on
+      clean, modular architecture, and most of it lives where conditions are hard:
+      offline-first field apps, background GPS, geofencing and real-time sync.
+      Currently Senior Software Engineer at Falkenherz Group, based in Lahore.
+    </p>
+    <div class="cta">
+      <a class="btn primary" href="#work">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        See the work
+      </a>
+      <a class="btn" href="https://github.com/AbubakarSaddiqueKhan" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+        GitHub
+      </a>
+      <a class="btn" href="https://www.linkedin.com/in/abubakar-aziz-flutter" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1a3.8 3.8 0 0 1 3.4-1.9c3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zm1.8 13H3.5V9h3.6v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7c0-.9-.8-1.7-1.8-1.7z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+    </div>
+
+    <figure class="portrait">
+      <img src="abubakar.webp" width="800" height="800"
+           alt="Abubakar Saddique" loading="eager" decoding="async">
+      <figcaption>Lahore, Pakistan</figcaption>
+    </figure>
+   </div>
+
+    <div class="stats">
+      <div class="stat"><b>14</b><span>products shipped</span></div>
+      <div class="stat"><b>6</b><span>live on Google Play</span></div>
+      <div class="stat"><b>4+</b><span>years, mobile only</span></div>
+      <div class="stat"><b>3</b><span>engineering teams</span></div>
+    </div>
+  </header>
+
+  <section id="work">
+    <div class="kicker">Selected work</div>
+    <div class="head"><h2>Fourteen products, built to run</h2></div>
+    <p class="sub">
+      Six are public on Google Play and open straight to their store listing.
+      The rest are client-owned or internal, so there is no public build to link —
+      those open my GitHub profile instead.
+    </p>
+
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="filter" data-filter="all" aria-pressed="true">All<span class="n">14</span></button>
+      <button class="filter" data-filter="pub" aria-pressed="false">On Google Play<span class="n">6</span></button>
+      <button class="filter" data-filter="field" aria-pressed="false">Field &amp; GPS<span class="n">6</span></button>
+      <button class="filter" data-filter="consumer" aria-pressed="false">Consumer<span class="n">5</span></button>
+    </div>
+
+    <div class="work" id="grid">
+
+      <article class="card pub" data-kind="pub field">
+        <div class="card-top">
+          <div class="mark">FF</div>
+          <h3><a href="https://play.google.com/store/apps/details?id=com.fieldforce.ai" target="_blank" rel="noopener noreferrer">Field Force-AI</a></h3>
+        </div>
+        <p>AI-powered field-force platform: location tracking, sales analytics, customer management, offline support, reporting and executive dashboards.</p>
+        <div class="tech"><span>Flutter</span><span>Offline-first</span><span>GPS</span><span>Analytics</span></div>
+        <div class="card-foot">
+          <span class="go">Google Play
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="pkg">com.fieldforce.ai</span>
+        </div>
+      </article>
+
+      <article class="card pub" data-kind="pub field">
+        <div class="card-top">
+          <div class="mark">PS</div>
+          <h3><a href="https://play.google.com/store/apps/details?id=com.fieldforce.ai.pharmasol" target="_blank" rel="noopener noreferrer">Pharmasol</a></h3>
+        </div>
+        <p>Pharmaceutical sales management platform with GPS tracking, maps, analytics and customer management.</p>
+        <div class="tech"><span>Flutter</span><span>Maps</span><span>GPS</span><span>REST</span></div>
+        <div class="card-foot">
+          <span class="go">Google Play
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="pkg">com.fieldforce.ai.pharmasol</span>
+        </div>
+      </article>
+
+      <article class="card pub" data-kind="pub consumer">
+        <div class="card-top">
+          <div class="mark">CL</div>
+          <h3><a href="https://play.google.com/store/apps/details?id=com.cas.elms" target="_blank" rel="noopener noreferrer">CAS LMS</a></h3>
+        </div>
+        <p>Learning management system with geofenced attendance, academic tracking, notifications and API integration.</p>
+        <div class="tech"><span>Flutter</span><span>Geofencing</span><span>Push</span><span>REST</span></div>
+        <div class="card-foot">
+          <span class="go">Google Play
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="pkg">com.cas.elms</span>
+        </div>
+      </article>
+
+      <article class="card pub" data-kind="pub consumer">
+        <div class="card-top">
+          <div class="mark">DD</div>
+          <h3><a href="https://play.google.com/store/apps/details?id=com.deenaorduniya.app" target="_blank" rel="noopener noreferrer">Deen Aor Duniya</a></h3>
+        </div>
+        <p>Islamic platform built with BLoC: REST APIs, offline content, media playback, cloud storage and localization.</p>
+        <div class="tech"><span>Flutter</span><span>BLoC</span><span>Media</span><span>Offline</span><span>i18n</span></div>
+        <div class="card-foot">
+          <span class="go">Google Play
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="pkg">com.deenaorduniya.app</span>
+        </div>
+      </article>
+
+      <article class="card pub" data-kind="pub consumer">
+        <div class="card-top">
+          <div class="mark">MK</div>
+          <h3><a href="https://play.google.com/store/apps/details?id=pk.org.cas.food_delivery_app" target="_blank" rel="noopener noreferrer">Mehar's Kitchen</a></h3>
+        </div>
+        <p>Food delivery platform in Flutter with BLoC, REST APIs and full order management.</p>
+        <div class="tech"><span>Flutter</span><span>BLoC</span><span>Orders</span><span>REST</span></div>
+        <div class="card-foot">
+          <span class="go">Google Play
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="pkg">pk.org.cas.food_delivery_app</span>
+        </div>
+      </article>
+
+      <article class="card pub" data-kind="pub consumer">
+        <div class="card-top">
+          <div class="mark">IV</div>
+          <h3><a href="https://play.google.com/store/apps/details?id=pk.org.cas.inviteplus" target="_blank" rel="noopener noreferrer">Invitor</a></h3>
+        </div>
+        <p>Digital invitation platform for creating and sharing event invitations.</p>
+        <div class="tech"><span>Flutter</span><span>Sharing</span><span>REST</span></div>
+        <div class="card-foot">
+          <span class="go">Google Play
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="pkg">pk.org.cas.inviteplus</span>
+        </div>
+      </article>
+
+      <article class="card" data-kind="field">
+        <div class="card-top">
+          <div class="mark">EF</div>
+          <h3><a href="https://github.com/AbubakarSaddiqueKhan" target="_blank" rel="noopener noreferrer">EFS</a></h3>
+        </div>
+        <p>Facilities management platform with GPS tracking, navigation, QR verification, push notifications and REST APIs.</p>
+        <div class="tech"><span>Flutter</span><span>GPS</span><span>QR</span><span>Push</span></div>
+        <div class="card-foot">
+          <span class="go">GitHub profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="badge">Client-owned</span>
+        </div>
+      </article>
+
+      <article class="card" data-kind="field">
+        <div class="card-top">
+          <div class="mark">PT</div>
+          <h3><a href="https://github.com/AbubakarSaddiqueKhan" target="_blank" rel="noopener noreferrer">Polytank</a></h3>
+        </div>
+        <p>B2B dealer ordering platform: route planning, geofenced clock-in and clock-out, real-time inventory and FCM push notifications.</p>
+        <div class="tech"><span>Flutter</span><span>Geofencing</span><span>FCM</span><span>Inventory</span></div>
+        <div class="card-foot">
+          <span class="go">GitHub profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="badge">Client-owned</span>
+        </div>
+      </article>
+
+      <article class="card" data-kind="field">
+        <div class="card-top">
+          <div class="mark">TJ</div>
+          <h3><a href="https://github.com/AbubakarSaddiqueKhan" target="_blank" rel="noopener noreferrer">Tajmee Driver App</a></h3>
+        </div>
+        <p>Smart waste-management platform with AI route optimization, IoT tracking and geospatial features.</p>
+        <div class="tech"><span>Flutter</span><span>IoT</span><span>Geospatial</span><span>Routing</span></div>
+        <div class="card-foot">
+          <span class="go">GitHub profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="badge">Client-owned</span>
+        </div>
+      </article>
+
+      <article class="card" data-kind="field">
+        <div class="card-top">
+          <div class="mark">UF</div>
+          <h3><a href="https://github.com/AbubakarSaddiqueKhan" target="_blank" rel="noopener noreferrer">UCCP Flood Management</a></h3>
+        </div>
+        <p>Stormwater emergency-response platform for tanker crews: geofenced dispatch, offline-first workflows and GPS-tagged photo evidence.</p>
+        <div class="tech"><span>Flutter</span><span>Offline-first</span><span>Geofencing</span><span>Camera</span></div>
+        <div class="card-foot">
+          <span class="go">GitHub profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="badge">Client-owned</span>
+        </div>
+      </article>
+
+      <article class="card" data-kind="field">
+        <div class="card-top">
+          <div class="mark">UI</div>
+          <h3><a href="https://github.com/AbubakarSaddiqueKhan" target="_blank" rel="noopener noreferrer">UCCP Inspector</a></h3>
+        </div>
+        <p>Hybrid Flutter and WebView inspector app for flood complaint management, with end-to-end background GPS tracking.</p>
+        <div class="tech"><span>Flutter</span><span>WebView</span><span>Background GPS</span></div>
+        <div class="card-foot">
+          <span class="go">GitHub profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="badge">Client-owned</span>
+        </div>
+      </article>
+
+      <article class="card" data-kind="field">
+        <div class="card-top">
+          <div class="mark">IM</div>
+          <h3><a href="https://github.com/AbubakarSaddiqueKhan" target="_blank" rel="noopener noreferrer">IIMS</a></h3>
+        </div>
+        <p>Hybrid Flutter and WebView application for inspections, task management and real-time location tracking.</p>
+        <div class="tech"><span>Flutter</span><span>WebView</span><span>Realtime</span></div>
+        <div class="card-foot">
+          <span class="go">GitHub profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="badge">Client-owned</span>
+        </div>
+      </article>
+
+      <article class="card" data-kind="consumer">
+        <div class="card-top">
+          <div class="mark">CH</div>
+          <h3><a href="https://github.com/AbubakarSaddiqueKhan" target="_blank" rel="noopener noreferrer">Chatty</a></h3>
+        </div>
+        <p>Real-time chat platform on Firebase with messaging, voice and video calling.</p>
+        <div class="tech"><span>Flutter</span><span>Firebase</span><span>WebRTC</span><span>Realtime</span></div>
+        <div class="card-foot">
+          <span class="go">GitHub profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="badge">Private</span>
+        </div>
+      </article>
+
+      <article class="card" data-kind="consumer">
+        <div class="card-top">
+          <div class="mark">TH</div>
+          <h3><a href="https://github.com/AbubakarSaddiqueKhan" target="_blank" rel="noopener noreferrer">The Healers Inc</a></h3>
+        </div>
+        <p>Wellness platform for appointment booking, virtual sessions and personalized services.</p>
+        <div class="tech"><span>Flutter</span><span>Booking</span><span>REST</span></div>
+        <div class="card-foot">
+          <span class="go">GitHub profile
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+          <span class="badge">Client-owned</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="kicker">Track record</div>
+    <div class="head"><h2>Experience</h2></div>
+    <div class="roles">
+      <article class="role">
+        <div>
+          <div class="when">Jun 2025 — Present</div>
+          <span class="now">Current</span>
+        </div>
+        <div>
+          <h3>Senior Software Engineer</h3>
+          <div class="org">Falkenherz Group · Multinational</div>
+          <p>Lead scalable Flutter development and architecture, while using AI-driven
+            autonomous workflows to improve engineering efficiency, automate repetitive
+            tasks and accelerate team delivery.</p>
+        </div>
+      </article>
+      <article class="role">
+        <div><div class="when">Jun 2024 — Jun 2025</div></div>
+        <div>
+          <h3>Software Engineer</h3>
+          <div class="org">Center for Advance Solution</div>
+          <p>Developed scalable Flutter applications using modular architecture, with a
+            strong focus on performance, maintainability and user experience.</p>
+        </div>
+      </article>
+      <article class="role">
+        <div><div class="when">2021 — May 2024</div></div>
+        <div>
+          <h3>Android Native &amp; Flutter Developer</h3>
+          <div class="org">Big Entities · US based</div>
+          <p>Built native Android and cross-platform Flutter applications using scalable
+            architecture, modern practices and performance-focused solutions.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="kicker">Toolkit</div>
+    <div class="head"><h2>Skills</h2></div>
+    <div class="skills">
+      <div class="skill"><h3>Mobile</h3>
+        <ul><li>Flutter</li><li>Dart</li><li>Native Android</li><li>Java</li><li>Platform Channels</li></ul></div>
+      <div class="skill"><h3>Architecture</h3>
+        <ul><li>Clean Architecture</li><li>Modular Design</li><li>SOLID</li></ul></div>
+      <div class="skill"><h3>State Management</h3>
+        <ul><li>BLoC</li><li>Riverpod</li><li>GetX</li><li>Provider</li></ul></div>
+      <div class="skill"><h3>Integrations</h3>
+        <ul><li>REST APIs</li><li>Firebase</li><li>Maps</li><li>Push Notifications</li><li>Voice &amp; Video SDKs</li></ul></div>
+      <div class="skill"><h3>Tools &amp; Deployment</h3>
+        <ul><li>Git</li><li>GitHub</li><li>Bitbucket</li><li>CI/CD</li><li>Play &amp; App Store</li></ul></div>
+    </div>
+  </section>
+
+  <div class="contact" id="contact">
+    <div class="kicker">Get in touch</div>
+    <h2>Available now, 14 days notice</h2>
+    <p>Open to remote roles worldwide and to relocation. The fastest way to reach me
+      is email — tap to copy either one.</p>
+    <div class="copyrow">
+      <button class="copy" data-copy="mabubakarsiddique21@gmail.com">
+        <span class="lbl">Email</span> mabubakarsiddique21@gmail.com
+      </button>
+      <button class="copy" data-copy="+92 303 8738355">
+        <span class="lbl">Phone</span> +92 303 8738355
+      </button>
+      <a class="copy" href="https://www.linkedin.com/in/abubakar-aziz-flutter" target="_blank" rel="noopener noreferrer">
+        <span class="lbl">LinkedIn</span> abubakar-aziz-flutter
+      </a>
+      <a class="copy" href="https://github.com/AbubakarSaddiqueKhan" target="_blank" rel="noopener noreferrer">
+        <span class="lbl">GitHub</span> AbubakarSaddiqueKhan
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span>Abubakar Saddique — Flutter &amp; native Android</span>
+    <span>Lahore, Pakistan</span>
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  /* theme toggle, remembered per viewer where storage allows */
+  var root = document.documentElement;
+  var btn = document.getElementById("theme");
+  try {
+    var saved = localStorage.getItem("portfolio-theme");
+    if (saved === "dark" || saved === "light") root.setAttribute("data-theme", saved);
+  } catch (e) { /* private window: fall back to the system theme */ }
+
+  btn.addEventListener("click", function () {
+    var current = root.getAttribute("data-theme");
+    if (!current) {
+      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      current = prefersDark ? "dark" : "light";
+    }
+    var next = current === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("portfolio-theme", next); } catch (e) {}
+  });
+
+  /* project filters */
+  var filters = document.querySelectorAll(".filter");
+  var cards = document.querySelectorAll("#grid .card");
+  filters.forEach(function (f) {
+    f.addEventListener("click", function () {
+      var want = f.getAttribute("data-filter");
+      filters.forEach(function (o) {
+        o.setAttribute("aria-pressed", String(o === f));
+      });
+      cards.forEach(function (c) {
+        var kinds = (c.getAttribute("data-kind") || "").split(" ");
+        c.hidden = !(want === "all" || kinds.indexOf(want) !== -1);
+      });
+    });
+  });
+
+  /* copy to clipboard, with a selection fallback */
+  var toast = document.getElementById("toast");
+  var timer;
+  function say(msg) {
+    toast.textContent = msg;
+    toast.classList.add("on");
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.classList.remove("on"); }, 1900);
+  }
+  document.querySelectorAll("button.copy").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var text = b.getAttribute("data-copy");
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(
+          function () { say("Copied " + text); },
+          function () { fallback(b); }
+        );
+      } else { fallback(b); }
+    });
+  });
+  function fallback(b) {
+    var range = document.createRange();
+    range.selectNodeContents(b);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    say("Select and copy");
+  }
+})();
+</script>
+
+</body>
+</html>
